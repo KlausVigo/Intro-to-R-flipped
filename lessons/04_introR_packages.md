@@ -79,16 +79,12 @@ BiocManager::install("ggplot2")
 > The code above may not be familiar to you - it is essentially using a new operator, a double colon `::` to execute a function from a particular package. This is the syntax: `package::function_name()`. 
 
 
-### Package installation from source
+### Package installation from r-universe
 
-Finally, R packages can also be installed from source. This is useful when you do not have an internet connection (and have the source files locally), since the other two methods are retrieving the source files from remote sites. 
-
-To install from source, we use the same `install.packages` function but we have additional arguments that provide *specifications* to *change from defaults*:
-
-```r
-# DO NOT RUN THIS!
-
-install.packages("~/Downloads/ggplot2_1.0.1.tar.gz", type="source", repos=NULL)
+Finally ther exist many packages on [github](https://github.com), often cutting edge development version. The developent version might contain crucial bug fixes, new functions or speed improvements you need. When these packages needs compilation, this is the case if these packages contain C, C++, FORTRAN, etc. code. This requires that you would have additional software installed. However there exist a page called [r-universe](https://r-universe.dev/) contains binaries for your operation system. 
+For example you can install the latest phangorn version  using the following command
+```
+install.packages('phangorn', repos = 'https://klausvigo.r-universe.dev')
 ```
 
 ### Loading libraries

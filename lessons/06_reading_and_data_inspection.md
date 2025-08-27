@@ -19,29 +19,13 @@ Many functions exist to read data in, and the function in R you use will depend 
 | Data type               | Extension | Function          | Package            |
 |:------------------------|:----------|:------------------|:-------------------|
 | Comma separated values  | csv       | `read.csv()`      | utils (default)    |
-|                         |           | `read_csv()`      | readr (tidyverse)  |
-| Tab separated values    | tsv       | `read_tsv()`      | readr              |
 | Other delimited formats | txt       | `read.table()`    | utils              |
-|                         |           | `read_table()`    | readr              |
-|                         |           | `read_delim()`    | readr              |
 
 For example, if we have text file where the columns are separated by commas (comma-separated values or comma-delimited), you could use the function `read.csv`. However, if the data are separated by a different delimiter in a text file (e.g. ":", ";", " ", "\t"), you could use the generic `read.table` function and specify the delimiter (`sep = " "`) as an argument in the function. 
 
 > Note: The `"\t"` delimiter is shorthand for tab.
 
-In the above table we refer to base R functions as being contained in the "utils" package. In addition to base R functions, we have also listed functions from some other packages that can be used to import data, specifically the "readr" package that installs when you install the "tidyverse" suite of packages.
-
-In addition to plain text files, you can also import data from other statistical analysis packages and Excel using functions from different packages. 
-
-| Data type               | Extension | Function          | Package            |
-|:------------------------|:----------|:------------------|:-------------------|
-| Stata version 13-14     | dta       | `readdta()`       | haven              |
-| Stata version 7-12      | dta       | `read.dta()`      | foreign            |
-| SPSS                    | sav       | `read.spss()`     | foreign            |
-| SAS                     | sas7bdat  | `read.sas7bdat()` | sas7bdat           |
-| Excel                   | xlsx, xls | `read_excel()`    | readxl (tidyverse) |
-
-Note, that these lists are not comprehensive, and may other functions exist for importing data. Once you have been using R for a bit, maybe you will have a preference for which functions you prefer to use for which data type.
+In the above table we refer to base R functions as being contained in the "utils" package. 
 
 ### Metadata
 
